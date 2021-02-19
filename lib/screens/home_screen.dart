@@ -152,7 +152,6 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
                 Container(
                   height: MediaQuery.of(context).size.height / 5.5,
-
                   width: MediaQuery.of(context).size.width - 16,
                   // color: Colors.lightBlueAccent,
                   child: Center(
@@ -164,79 +163,20 @@ class _HomeScreenState extends State<HomeScreen> {
                                     MediaQuery.of(context).size.height
                                 ? 10
                                 : 4),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Container(
-                              // color: Colors.lightBlue[50],
-                              width: MediaQuery.of(context).size.width / 3.3,
-                              child: InkWell(
-                                onTap: () {},
-                                child: Chip(
-                                  backgroundColor: Colors.lightBlue[50],
-                                  label: Text(
-                                    "UI designs",
-                                    style: GoogleFonts.martel(
-                                      fontSize: MediaQuery.of(context)
-                                                  .size
-                                                  .width >
-                                              MediaQuery.of(context).size.height
-                                          ? 14
-                                          : 12,
-                                      color: Colors.black,
-                                      // color: Colors.blueAccent[700],
-                                      letterSpacing: .1,
-                                      fontWeight: FontWeight.w700,
-                                    ),
-                                  ),
-                                ),
-                              ),
-                            ),
-                            Container(
-                              height: 15,
-                              width: .5,
-                              color: Colors.black,
-                            ),
-                            Container(
-                              width: MediaQuery.of(context).size.width / 3,
-                              child: InkWell(
-                                onTap: () {},
-                                child: Chip(
-                                  backgroundColor: Colors.lightBlue[50],
-                                  label: Text(
-                                    "Apps on store",
-                                    style: GoogleFonts.martel(
-                                      fontSize: MediaQuery.of(context)
-                                                  .size
-                                                  .width >
-                                              MediaQuery.of(context).size.height
-                                          ? 14
-                                          : 12,
-                                      color: Colors.black,
-                                      letterSpacing: .1,
-                                      fontWeight: FontWeight.w700,
-                                    ),
-                                  ),
-                                ),
-                              ),
-                            ),
-                            Container(
-                              height: 15,
-                              width: .5,
-                              color: Colors.black,
-                            ),
-                            Container(
-                              width: MediaQuery.of(context).size.width / 3.4,
-                              child: InkWell(
-                                onTap: () {
-                                  Navigator.pushNamed(context, '/cv');
-                                },
-                                child: Hero(
-                                  tag: 'cv',
-                                  child: Chip(
-                                    backgroundColor: Colors.lightBlue[50],
-                                    label: Text(
-                                      'CV',
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceAround,
+                              children: [
+                                Container(
+                                  // color: Colors.lightBlue[50],
+                                  width:
+                                      MediaQuery.of(context).size.width / 3.3,
+                                  child: MaterialButton(
+                                    onPressed: () {},
+                                    child: Text(
+                                      "UI designs",
                                       style: GoogleFonts.martel(
                                         fontSize:
                                             MediaQuery.of(context).size.width >
@@ -244,22 +184,83 @@ class _HomeScreenState extends State<HomeScreen> {
                                                         .size
                                                         .height
                                                 ? 14
-                                                : 12,
-                                        color: Colors.black,
+                                                : 13,
+                                        color: Colors.blue,
+                                        // color: Colors.blueAccent[700],
                                         letterSpacing: .1,
                                         fontWeight: FontWeight.w700,
                                       ),
                                     ),
                                   ),
                                 ),
-                              ),
+                                Container(
+                                  height: 15,
+                                  width: .5,
+                                  color: Colors.black,
+                                ),
+                                Container(
+                                  width: MediaQuery.of(context).size.width / 3,
+                                  child: MaterialButton(
+                                    onPressed: () {},
+                                    child: Text(
+                                      "Apps on store",
+                                      style: GoogleFonts.martel(
+                                        fontSize:
+                                            MediaQuery.of(context).size.width >
+                                                    MediaQuery.of(context)
+                                                        .size
+                                                        .height
+                                                ? 14
+                                                : 13,
+                                        color: Colors.blue,
+                                        letterSpacing: .1,
+                                        fontWeight: FontWeight.w700,
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                                Container(
+                                  height: 15,
+                                  width: .5,
+                                  color: Colors.black,
+                                ),
+                                Container(
+                                  width:
+                                      MediaQuery.of(context).size.width / 3.4,
+                                  child: MaterialButton(
+                                    onPressed: () {
+                                      Navigator.pushNamed(context, '/cv');
+                                    },
+                                    child: Hero(
+                                      tag: 'cv',
+                                      child: Text(
+                                        'CV',
+                                        style: GoogleFonts.martel(
+                                          fontSize: MediaQuery.of(context)
+                                                      .size
+                                                      .width >
+                                                  MediaQuery.of(context)
+                                                      .size
+                                                      .height
+                                              ? 14
+                                              : 13,
+                                          color: Colors.blue,
+                                          letterSpacing: .1,
+                                          fontWeight: FontWeight.w700,
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                            Container(
+                              width:
+                                  MediaQuery.of(context).size.width * 3.6 / 4,
+                              height: .4,
+                              color: Colors.black,
                             ),
                           ],
-                        ),
-                        Container(
-                          width: MediaQuery.of(context).size.width * 3.6 / 4,
-                          height: .4,
-                          color: Colors.black,
                         ),
                         SizedBox(
                             height: MediaQuery.of(context).size.width >
@@ -463,7 +464,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        SizedBox(height:5),
+                        SizedBox(height: 5),
                         Text(
                           "Currently available for freelance works.",
                           style: GoogleFonts.martel(

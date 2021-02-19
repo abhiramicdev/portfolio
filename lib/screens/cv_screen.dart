@@ -18,6 +18,7 @@ class CVScreen extends StatelessWidget {
             fontSize: 25,
           ),
         ),
+        centerTitle: true,
       ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 8.0),
@@ -177,11 +178,11 @@ class CVScreen extends StatelessWidget {
                       width: MediaQuery.of(context).size.width >
                               MediaQuery.of(context).size.height
                           ? MediaQuery.of(context).size.width / 14
-                          : 16,
+                          : MediaQuery.of(context).size.width / 24,
                     ),
                     Container(
                       // color: Colors.lightGreen[50],
-                      width: MediaQuery.of(context).size.width * 3.6 / 4,
+                      width: MediaQuery.of(context).size.width * 22 / 24,
                       height: MediaQuery.of(context).size.width >
                               MediaQuery.of(context).size.height
                           ? MediaQuery.of(context).size.height / 3
@@ -213,7 +214,7 @@ class CVScreen extends StatelessWidget {
                                   MediaQuery.of(context).size.width >
                                           MediaQuery.of(context).size.height
                                       ? MediaQuery.of(context).size.height / 24
-                                      : 50),
+                                      : 75,MediaQuery.of(context).size.width * 2.4 / 4,),
                             ],
                           ),
                           Row(
@@ -222,7 +223,7 @@ class CVScreen extends StatelessWidget {
                             children: [
                               SubHeading("Platforms:"),
                               SizedBox(width: 5),
-                              SkillTile("MacOS, Windows, Linux, Ubuntu", 30),
+                              SkillTile("MacOS, Windows, Linux, Ubuntu", 30,MediaQuery.of(context).size.width * 2.7 / 4,),
                             ],
                           ),
                           Row(
@@ -231,7 +232,12 @@ class CVScreen extends StatelessWidget {
                             children: [
                               SubHeading("IDE Experience:"),
                               SizedBox(width: 5),
-                              SkillTile("MacOS, Windows, Linux, Ubuntu", 30),
+                              SkillTile(
+                                  "Visual Studio Code, Android Studio, Eclipse",
+                                  MediaQuery.of(context).size.width >
+                                          MediaQuery.of(context).size.height
+                                      ? MediaQuery.of(context).size.height / 24
+                                      : 50,MediaQuery.of(context).size.width * 2.3 / 4,),
                             ],
                           ),
                           Row(
@@ -240,7 +246,7 @@ class CVScreen extends StatelessWidget {
                             children: [
                               SubHeading("Frameworks:"),
                               SizedBox(width: 5),
-                              SkillTile("Flutter", 30),
+                              SkillTile("Flutter", 30,MediaQuery.of(context).size.width * 2.3 / 4,),
                             ],
                           ),
                           Row(
@@ -250,7 +256,10 @@ class CVScreen extends StatelessWidget {
                               SubHeading("Tools:"),
                               SizedBox(width: 5),
                               SkillTile(
-                                  "GIT, Postman, Genymotion, GIMP, Pencil", 30),
+                                  "GIT, Postman, Genymotion, GIMP, Pencil", MediaQuery.of(context).size.width >
+                                          MediaQuery.of(context).size.height
+                                      ? MediaQuery.of(context).size.height / 24
+                                      : 50,MediaQuery.of(context).size.width * 2.7 / 4,),
                             ],
                           ),
                           //                              Row(
