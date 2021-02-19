@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:myportfolio/widgets/skill_tile.dart';
+import 'package:myportfolio/widgets/subheading_style.dart';
 
 class CVScreen extends StatelessWidget {
   @override
@@ -12,10 +14,10 @@ class CVScreen extends StatelessWidget {
         title: Hero(
           tag: 'cv',
           child: Text(
-            "Developer's CV",
-            // "Abhirami C",
+            "Abhirami C",
             style: GoogleFonts.martel(
               color: Colors.black,
+              fontSize: 23,
             ),
           ),
         ),
@@ -45,7 +47,7 @@ class CVScreen extends StatelessWidget {
                     width: MediaQuery.of(context).size.width / 1.5,
                     child: Center(
                       child: Text(
-                        "I'm a creative flutter developer with 2+ years experience in mobile application development",
+                        "Enthusiastic creative Flutter developer with 2+ years experience in flutter development. Consistent self learner, expert at rendering UI/UX designs perfectly for applications.",
                         textAlign: TextAlign.center,
                         style: GoogleFonts.martel(
                           color: Colors.black,
@@ -57,28 +59,18 @@ class CVScreen extends StatelessWidget {
               ),
               //** Experience container */
               Container(
-                height: MediaQuery.of(context).size.height / 2,
+                // color: Colors.orange,
+                height: MediaQuery.of(context).size.width >
+                        MediaQuery.of(context).size.height
+                    ? MediaQuery.of(context).size.height / 2.8
+                    : MediaQuery.of(context).size.height / 2.2,
                 width: MediaQuery.of(context).size.width,
-                // color: Colors.lightGreen[50],
-                // child: Column(
-                //   crossAxisAlignment: CrossAxisAlignment.start,
-                //   children: [
-                //     Padding(
-                //       padding: const EdgeInsets.only(bottom:7.0),
-                //       child: Text(
-                //         "EXPERIENCE",
-                //         style: GoogleFonts.martel(
-                //           color: Colors.blue,
-                //           fontSize: 15,
-                //         ),
-                //       ),
-                //     ),
-                //     CvExpTile(),
-                //   ],
-                // ),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
+                    Container(
+                        // color: Colors.lightBlue[50],
+                        height: MediaQuery.of(context).size.height / 40),
                     Text(
                       "EXPERIENCE",
                       style: GoogleFonts.martel(
@@ -86,16 +78,8 @@ class CVScreen extends StatelessWidget {
                         fontSize: 15,
                       ),
                     ),
-                    Text(
-                      // 'Company name',
-                      // "INOMETRICS TECHNOLOGY SYSTEMS PVT LTD",
-                      "Inometrics Technology Systems Pvt Ltd - Technopark",
-                      style: GoogleFonts.martel(
-                        color: Colors.black,
-                        fontWeight: FontWeight.w700,
-                        fontSize: 14,
-                      ),
-                    ),
+                    SubHeading(
+                        "Inometrics Technology Systems Pvt Ltd - Technopark"),
                     Text(
                       "Flutter Developer",
                       style: GoogleFonts.martel(
@@ -120,19 +104,8 @@ class CVScreen extends StatelessWidget {
                     Container(
                         // color: Colors.lightBlue[50],
                         height: MediaQuery.of(context).size.height / 40),
+                    SubHeading("Elementz Engineers Guild Pvt Ltd"),
                     Text(
-                      // 'Company name',
-                      // "INOMETRICS TECHNOLOGY SYSTEMS PVT LTD",
-                      "Elementz Engineers Guild Pvt Ltd",
-                      // "Inometrics Technology Systems Pvt Ltd - Technopark",
-                      style: GoogleFonts.martel(
-                        color: Colors.black,
-                        fontWeight: FontWeight.w700,
-                        fontSize: 14,
-                      ),
-                    ),
-                    Text(
-                      // "Flutter Developer",
                       "Android Application Development Intern",
                       style: GoogleFonts.martel(
                         color: Colors.black,
@@ -155,32 +128,92 @@ class CVScreen extends StatelessWidget {
                     ),
                   ],
                 ),
-                // child: FixedTimeline(
-                //   children: [CvExpTile()],
-                //   // theme: TimelineThemeData(...),
-                //   // children: [...],
-                // ),
-                // child: Timeline.tileBuilder(
-                // builder: TimelineTileBuilder.fromStyle(
-                //   contentsAlign: ContentsAlign.reverse,
-                //   contentsBuilder: (context, index) => Padding(
-                //     padding: const EdgeInsets.all(16.0),
-                //     child: CvExpTile(),
-                //     // child: Text('Timeline Event $index'),
-                //   ),
-                //   itemCount: 2,
-                // ),
-                //   ),
+              ),
+              //** SKILLS */
+              Container(
+                // color: Colors.lightGreen[50],
+                width: MediaQuery.of(context).size.width,
+                height: MediaQuery.of(context).size.width >
+                        MediaQuery.of(context).size.height
+                    ? MediaQuery.of(context).size.height / 4.8
+                    : MediaQuery.of(context).size.height / 2.2,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      "SKILLS",
+                      style: GoogleFonts.martel(
+                        color: Colors.blue,
+                        fontSize: 15,
+                      ),
+                    ),
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        SubHeading("Languages:"),
+                        SizedBox(width: 5),
+                        SkillTile(
+                            "DART, Java SE 9, XML, SQLite, MySQL, HTML, CSS, JS, Angular(Basic), Node JS(Basic)",
+                            50.0),
+                      ],
+                    ),
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        SubHeading("Platforms:"),
+                        SizedBox(width: 5),
+                        SkillTile("MacOS, Windows, Linux, Ubuntu", 30),
+                      ],
+                    ),
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        SubHeading("IDE Experience:"),
+                        SizedBox(width: 5),
+                        SkillTile("MacOS, Windows, Linux, Ubuntu", 30),
+                        // SkillTile(
+                        //     "DART, Java SE 9, XML, SQLite, MySQL, HTML, CSS, JS, Angular(Basic), Node JS(Basic)"),
+                      ],
+                    ),
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        SubHeading("Frameworks:"),
+                        SizedBox(width: 5),
+                        SkillTile("Flutter", 30),
+                      ],
+                    ),
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        SubHeading("Tools:"),
+                        SizedBox(width: 5),
+                        SkillTile("GIT, Postman, Genymotion, GIMP, Pencil", 30),
+                      ],
+                    ),
+                    //                              Row(
+                    //   crossAxisAlignment: CrossAxisAlignment.start,
+                    //   mainAxisAlignment: MainAxisAlignment.start,
+                    //   children: [
+                    //     SubHeading("Technologies:"),
+                    //     SizedBox(width: 5),
+                    //     SkillTile("GIT, Postman, Genymotion, GIMP, Pencil"),
+                    //     // SkillTile(
+                    //     //     "DART, Java SE 9, XML, SQLite, MySQL, HTML, CSS, JS, Angular(Basic), Node JS(Basic)"),
+                    //   ],
+                    // ),
+                  ],
+                ),
               ),
             ],
           ),
         ),
       ),
-      // body: Center(
-      //   child: Text(
-      //     'Second',
-      //   ),
-      // ),
     );
   }
 }

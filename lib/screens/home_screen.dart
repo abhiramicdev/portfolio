@@ -188,16 +188,17 @@ class _HomeScreenState extends State<HomeScreen> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         // SizedBox(height: 10),
-                        Text(
-                          "Indian, keralite with 2 years+ experience in crossplatform application development",
-                          textAlign: TextAlign.center,
-                          style: GoogleFonts.martel(
-                            fontSize: MediaQuery.of(context).size.width >
-                                    MediaQuery.of(context).size.height
-                                ? 15
-                                : 13,
-                          ),
-                        ),
+                        // Text(
+                        //   "Indian, keralite with 2 years+ experience in crossplatform application development",
+                        //   textAlign: TextAlign.center,
+                        //   style: GoogleFonts.martel(
+                        //     color: Colors.black,
+                        //     fontSize: MediaQuery.of(context).size.width >
+                        //             MediaQuery.of(context).size.height
+                        //         ? 15
+                        //         : 13,
+                        //   ),
+                        // ),
                         // ),
                         SizedBox(
                             height: MediaQuery.of(context).size.width >
@@ -264,7 +265,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               width: MediaQuery.of(context).size.width / 5,
                               child: MaterialButton(
                                 onPressed: () {
-                                  // Navigator.pushNamed(context, '/cv');
+                                  Navigator.pushNamed(context, '/cv');
                                 },
                                 child: Hero(
                                   tag: 'cv',
@@ -325,12 +326,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 ? 13
                                 : 6),
                         Text(
-                          // "I can help you with",
-                          // "Contact me for ",
-                          // "SERVICES",
                           "Services",
-                          // "Contact for:",
-                          // "What I can do.",
                           style: GoogleFonts.martel(
                             color: Colors.lightBlue,
                             fontSize: MediaQuery.of(context).size.width >

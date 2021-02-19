@@ -12,7 +12,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
          title: "Abhirami's Portfolio",
       debugShowCheckedModeBanner: false,
+      // theme: ThemeData.dark(),
       theme: ThemeData(
+        
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
