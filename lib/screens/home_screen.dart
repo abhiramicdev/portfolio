@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_sinusoidals/flutter_sinusoidals.dart';
 import 'package:google_fonts/google_fonts.dart';
-// import 'package:shimmer/shimmer.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -19,22 +18,6 @@ class _HomeScreenState extends State<HomeScreen> {
     // Color(0xFF80CAF3),
     // Colors.lightBlueAccent,
   ];
-
-// double opacity = 1.0;
-//   changeOpacity() {
-//   Future.delayed(Duration(seconds: 1), () {
-//     setState(() {
-//       opacity = opacity == 0.0 ? 1.0 : 0.0;
-//       changeOpacity();
-//     });
-//   });
-// }
-
-// @override
-//   void initState() {
-//     changeOpacity();
-//     super.initState();
-//   }
 
   @override
   Widget build(BuildContext context) {
@@ -156,7 +139,6 @@ class _HomeScreenState extends State<HomeScreen> {
                                                         .height
                                                 ? 30
                                                 : 21,
-                                            // fontWeight: FontWeight.w400,
                                           ),
                                         ),
                                       ],
@@ -168,38 +150,18 @@ class _HomeScreenState extends State<HomeScreen> {
                           );
                         },
                       ),
-                      // child: ClipPath(
-                      //   clipper: GreenClipper(),
-
-                      // ),
                     ),
                   ],
                 ),
                 Container(
                   height: MediaQuery.of(context).size.height / 5.5,
-                  // height: MediaQuery.of(context).size.width >
-                  //         MediaQuery.of(context).size.height
-                  //     ? 5.5
-                  //     : 5.6,
+
                   width: MediaQuery.of(context).size.width - 16,
                   // color: Colors.lightBlueAccent,
                   child: Center(
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        // SizedBox(height: 10),
-                        // Text(
-                        //   "Indian, keralite with 2 years+ experience in crossplatform application development",
-                        //   textAlign: TextAlign.center,
-                        //   style: GoogleFonts.martel(
-                        //     color: Colors.black,
-                        //     fontSize: MediaQuery.of(context).size.width >
-                        //             MediaQuery.of(context).size.height
-                        //         ? 15
-                        //         : 13,
-                        //   ),
-                        // ),
-                        // ),
                         SizedBox(
                             height: MediaQuery.of(context).size.width >
                                     MediaQuery.of(context).size.height
@@ -213,18 +175,22 @@ class _HomeScreenState extends State<HomeScreen> {
                               width: MediaQuery.of(context).size.width / 3.3,
                               child: MaterialButton(
                                 onPressed: () {},
-                                child: Text(
-                                  "Design works",
-                                  style: GoogleFonts.martel(
-                                    fontSize: MediaQuery.of(context)
-                                                .size
-                                                .width >
-                                            MediaQuery.of(context).size.height
-                                        ? 14
-                                        : 12,
-                                    color: Colors.black,
-                                    letterSpacing: .1,
-                                    fontWeight: FontWeight.w700,
+                                child: Chip(
+                                  backgroundColor: Colors.lightBlue[50],
+                                  label: Text(
+                                    "UI designs",
+                                    style: GoogleFonts.martel(
+                                      fontSize: MediaQuery.of(context)
+                                                  .size
+                                                  .width >
+                                              MediaQuery.of(context).size.height
+                                          ? 14
+                                          : 12,
+                                      color: Colors.black,
+                                      // color: Colors.blueAccent[700],
+                                      letterSpacing: .1,
+                                      fontWeight: FontWeight.w700,
+                                    ),
                                   ),
                                 ),
                               ),
@@ -235,42 +201,13 @@ class _HomeScreenState extends State<HomeScreen> {
                               color: Colors.black,
                             ),
                             Container(
-                              // color: Colors.lightGreen[50],
                               width: MediaQuery.of(context).size.width / 3.3,
                               child: MaterialButton(
                                 onPressed: () {},
-                                child: Text(
-                                  "Apps on store",
-                                  style: GoogleFonts.martel(
-                                    fontSize: MediaQuery.of(context)
-                                                .size
-                                                .width >
-                                            MediaQuery.of(context).size.height
-                                        ? 14
-                                        : 12,
-                                    color: Colors.black,
-                                    letterSpacing: .1,
-                                    fontWeight: FontWeight.w700,
-                                  ),
-                                ),
-                              ),
-                            ),
-                            Container(
-                              height: 15,
-                              width: .5,
-                              color: Colors.black,
-                            ),
-                            Container(
-                              // color: Colors.orange[50],
-                              width: MediaQuery.of(context).size.width / 5,
-                              child: MaterialButton(
-                                onPressed: () {
-                                  Navigator.pushNamed(context, '/cv');
-                                },
-                                child: Hero(
-                                  tag: 'cv',
-                                  child: Text(
-                                    'CV',
+                                child: Chip(
+                                  backgroundColor: Colors.lightBlue[50],
+                                  label: Text(
+                                    "Apps on store",
                                     style: GoogleFonts.martel(
                                       fontSize: MediaQuery.of(context)
                                                   .size
@@ -286,36 +223,43 @@ class _HomeScreenState extends State<HomeScreen> {
                                 ),
                               ),
                             ),
-                            // Container(
-                            //   height: 15,
-                            //   width: .5,
-                            //   color: Colors.black,
-                            // ),
-                            // Container(
-                            //   color: Colors.red[50],
-                            //   width: MediaQuery.of(context).size.width / 5,
-                            //   child: MaterialButton(
-                            //     onPressed: () {},
-                            //     child: Text(
-                            //       'Contact',
-                            //       style: GoogleFonts.martel(
-                            //         fontSize: MediaQuery.of(context)
-                            //                     .size
-                            //                     .width >
-                            //                 MediaQuery.of(context).size.height
-                            //             ? 14
-                            //             : 11,
-                            //         letterSpacing: .1,
-                            //         color: Colors.black,
-                            //         fontWeight: FontWeight.w700,
-                            //       ),
-                            //     ),
-                            //   ),
-                            // ),
+                            Container(
+                              height: 15,
+                              width: .5,
+                              color: Colors.black,
+                            ),
+                            Container(
+                              width: MediaQuery.of(context).size.width / 5,
+                              child: MaterialButton(
+                                onPressed: () {
+                                  Navigator.pushNamed(context, '/cv');
+                                },
+                                child: Hero(
+                                  tag: 'cv',
+                                  child: Chip(
+                                    backgroundColor: Colors.lightBlue[50],
+                                    label: Text(
+                                      'CV',
+                                      style: GoogleFonts.martel(
+                                        fontSize:
+                                            MediaQuery.of(context).size.width >
+                                                    MediaQuery.of(context)
+                                                        .size
+                                                        .height
+                                                ? 14
+                                                : 12,
+                                        color: Colors.black,
+                                        letterSpacing: .1,
+                                        fontWeight: FontWeight.w700,
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
                           ],
                         ),
                         Container(
-                          // width: MediaQuery.of(context).size.width * 3.16 / 4,
                           width: MediaQuery.of(context).size.width * 3.6 / 4,
                           height: .4,
                           color: Colors.black,
@@ -328,11 +272,11 @@ class _HomeScreenState extends State<HomeScreen> {
                         Text(
                           "Services",
                           style: GoogleFonts.martel(
-                            color: Colors.lightBlue,
+                            color: Colors.black,
                             fontSize: MediaQuery.of(context).size.width >
                                     MediaQuery.of(context).size.height
                                 ? 26
-                                : 16,
+                                : 20,
                             fontWeight: FontWeight.w600,
                           ),
                         ),
@@ -341,7 +285,6 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 ),
                 Container(
-                  // color: Colors.lightBlue[100],
                   height: MediaQuery.of(context).size.width >
                           MediaQuery.of(context).size.height
                       ? MediaQuery.of(context).size.height / 3.5
@@ -349,23 +292,13 @@ class _HomeScreenState extends State<HomeScreen> {
                   child: Center(
                     child: MediaQuery.of(context).size.width >
                             MediaQuery.of(context).size.height
-                        ?
-                        //         MediaQuery.of(context).size.heightListView(
-                        // physics: ScrollPhysics(),
-                        // scrollDirection: MediaQuery.of(context).size.width >
-                        //         MediaQuery.of(context).size.height
-                        //     ? Axis.horizontal
-                        //     : Axis.vertical,
-                        Row(
+                        ? Row(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
                               Row(
-                                // mainAxisAlignment: MainAxisAlignment.center,
-                                // crossAxisAlignment: CrossAxisAlignment.center,
                                 children: [
                                   Image.asset(
                                     'lib/assets/images/mob_deva.png',
-                                    // width: MediaQuery.of(context).size.width / 3,
                                     height: MediaQuery.of(context).size.height /
                                         4.5,
                                   ),
@@ -446,11 +379,9 @@ class _HomeScreenState extends State<HomeScreen> {
                             children: [
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
-                                // crossAxisAlignment: CrossAxisAlignment.center,
                                 children: [
                                   Image.asset(
                                     'lib/assets/images/mob_deva.png',
-                                    // width: MediaQuery.of(context).size.width / 3,
                                     height:
                                         MediaQuery.of(context).size.height / 5,
                                   ),
@@ -528,17 +459,14 @@ class _HomeScreenState extends State<HomeScreen> {
                 Container(
                   width: MediaQuery.of(context).size.width,
                   height: MediaQuery.of(context).size.height / 7,
-                  // color: Colors.lightGreen[100],
                   child: Center(
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        // SizedBox(height: 10),
                         Text(
                           "Currently available for freelance works.",
                           style: GoogleFonts.martel(),
                         ),
-                        // SizedBox(height: 10),
                         SizedBox(
                           height: 40,
                           child: Row(
@@ -549,22 +477,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 heroTag: 'call',
                                 backgroundColor: Colors.white,
                                 splashColor: Colors.lightBlue[50],
-                                // onPressed: () {},
                                 onPressed: () => launch("tel://8921475913"),
-                                // onPressed: () => launch("tel://21213123123"),
-                                // _makePhoneCall('tel:$_phone');
-                                // onPressed: () => setState(() {
-                                //   _launched = _makePhoneCall('tel:$_phone');
-                                // }),
-                                // child: const Text('Make phone call'),
-
-                                // if (await canLaunch('tel:+918921475913')) {
-                                //   await launch('tel:+918921475913');
-                                // } else {
-                                //   throw 'Could not launch +918921475913';
-                                // }
-                                // await launch('+8921475913');
-                                // },
                                 label: Text(
                                   'Call',
                                   style: GoogleFonts.martel(
@@ -594,33 +507,6 @@ class _HomeScreenState extends State<HomeScreen> {
                                   color: Colors.black,
                                 ),
                               ),
-                              // FloatingActionButton.extended(
-                              //   heroTag: 'chat',
-                              //   backgroundColor: Colors.white,
-                              //   splashColor: Colors.lightBlue[50],
-                              //   onPressed: () {},
-                              //   //  onPressed: () => launch("tel://8921475913"),
-
-                              //   label: Text(
-                              //     'chat',
-                              //     style: GoogleFonts.martel(
-                              //       color: Colors.black,
-                              //     ),
-                              //   ),
-                              //   icon: Icon(
-                              //     Icons.chat,
-                              //     color: Colors.black,
-                              //   ),
-                              // ),
-                              // IconButton(icon: Icon(Icons.email_outlined), onPressed: (){},),
-
-                              //  ElevatedButton.icon(
-                              //   onPressed: () {},
-                              //   icon: Icon(Icons.email_outlined),
-                              //   label: Text(
-                              //     'Email',
-                              //   ),
-                              // ),
                             ],
                           ),
                         ),

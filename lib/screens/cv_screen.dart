@@ -62,8 +62,8 @@ class CVScreen extends StatelessWidget {
                 // color: Colors.orange,
                 height: MediaQuery.of(context).size.width >
                         MediaQuery.of(context).size.height
-                    ? MediaQuery.of(context).size.height / 2.8
-                    : MediaQuery.of(context).size.height / 2.2,
+                    ? MediaQuery.of(context).size.height / 2.5
+                    : MediaQuery.of(context).size.height / 2.1,
                 width: MediaQuery.of(context).size.width,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -103,7 +103,7 @@ class CVScreen extends StatelessWidget {
                     ),
                     Container(
                         // color: Colors.lightBlue[50],
-                        height: MediaQuery.of(context).size.height / 40),
+                        height: MediaQuery.of(context).size.height / 50),
                     SubHeading("Elementz Engineers Guild Pvt Ltd"),
                     Text(
                       "Android Application Development Intern",
@@ -135,7 +135,7 @@ class CVScreen extends StatelessWidget {
                 width: MediaQuery.of(context).size.width,
                 height: MediaQuery.of(context).size.width >
                         MediaQuery.of(context).size.height
-                    ? MediaQuery.of(context).size.height / 4.8
+                    ? MediaQuery.of(context).size.height / 3
                     : MediaQuery.of(context).size.height / 2.2,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
