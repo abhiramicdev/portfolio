@@ -22,13 +22,10 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // backgroundColor: Colors.lightBlue[50],
       backgroundColor: Colors.white,
       body: SingleChildScrollView(
         child: Container(
           height: MediaQuery.of(context).size.height,
-          // height: MediaQuery.of(context).size.height +
-          //     MediaQuery.of(context).size.height / 5,
           width: MediaQuery.of(context).size.width,
           child: Center(
             child: Column(

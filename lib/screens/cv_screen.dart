@@ -6,7 +6,6 @@ import 'package:myportfolio/widgets/subheading_style.dart';
 class CVScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    double margin = MediaQuery.of(context).size.width / 12;
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
@@ -80,15 +79,6 @@ class CVScreen extends StatelessWidget {
                           ? MediaQuery.of(context).size.width / 14
                           : 16,
                     ),
-                    // MediaQuery.of(context).size.width >
-                    //         MediaQuery.of(context).size.height
-                    //     ? Container(
-                    //         color: Colors.lightBlue,
-                    //         width: MediaQuery.of(context).size.width / 12)
-                    //     : SizedBox(width: 0),
-                    // padding: MediaQuery.of(context).size.width >
-                    //           MediaQuery.of(context).size.height
-                    //       ? const EdgeInsets.only(left:50): EdgeInsets.only(left:0),
                     Container(
                       // color: Colors.lightGreen,
                       height: MediaQuery.of(context).size.width >
@@ -195,12 +185,6 @@ class CVScreen extends StatelessWidget {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          // MediaQuery.of(context).size.width >
-                          //         MediaQuery.of(context).size.height
-                          //     ? Container(
-                          //         color: Colors.lightBlue,
-                          //         width: MediaQuery.of(context).size.width / 3)
-                          //     : SizedBox(width: 0),
                           Text(
                             "SKILLS",
                             style: GoogleFonts.martel(
@@ -238,8 +222,6 @@ class CVScreen extends StatelessWidget {
                               SubHeading("IDE Experience:"),
                               SizedBox(width: 5),
                               SkillTile("MacOS, Windows, Linux, Ubuntu", 30),
-                              // SkillTile(
-                              //     "DART, Java SE 9, XML, SQLite, MySQL, HTML, CSS, JS, Angular(Basic), Node JS(Basic)"),
                             ],
                           ),
                           Row(
