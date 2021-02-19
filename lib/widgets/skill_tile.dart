@@ -10,7 +10,7 @@ class SkillTile extends StatelessWidget {
     return Container(
       // color: Colors.purple[50],
       height: this.height,
-      width: MediaQuery.of(context).size.width * 2.8 / 4,
+      width: MediaQuery.of(context).size.width * 2.6 / 4,
       child: Text(
         this.title,
         style: GoogleFonts.martel(
