@@ -170,8 +170,8 @@ class _HomeScreenState extends State<HomeScreen> {
                             Container(
                               // color: Colors.lightBlue[50],
                               width: MediaQuery.of(context).size.width / 3.3,
-                              child: MaterialButton(
-                                onPressed: () {},
+                              child: InkWell(
+                                onTap: () {},
                                 child: Chip(
                                   backgroundColor: Colors.lightBlue[50],
                                   label: Text(
@@ -198,9 +198,9 @@ class _HomeScreenState extends State<HomeScreen> {
                               color: Colors.black,
                             ),
                             Container(
-                              width: MediaQuery.of(context).size.width / 3.3,
-                              child: MaterialButton(
-                                onPressed: () {},
+                              width: MediaQuery.of(context).size.width / 3,
+                              child: InkWell(
+                                onTap: () {},
                                 child: Chip(
                                   backgroundColor: Colors.lightBlue[50],
                                   label: Text(
@@ -226,9 +226,9 @@ class _HomeScreenState extends State<HomeScreen> {
                               color: Colors.black,
                             ),
                             Container(
-                              width: MediaQuery.of(context).size.width / 5,
-                              child: MaterialButton(
-                                onPressed: () {
+                              width: MediaQuery.of(context).size.width / 3.4,
+                              child: InkWell(
+                                onTap: () {
                                   Navigator.pushNamed(context, '/cv');
                                 },
                                 child: Hero(
@@ -267,7 +267,9 @@ class _HomeScreenState extends State<HomeScreen> {
                                 ? 13
                                 : 6),
                         Text(
-                          "Services",
+                          // "Services",
+                          "I can help create",
+                          // "What I can do.",
                           style: GoogleFonts.martel(
                             color: Colors.black,
                             fontSize: MediaQuery.of(context).size.width >
@@ -308,21 +310,22 @@ class _HomeScreenState extends State<HomeScreen> {
                                         'Andriod',
                                         style: GoogleFonts.martel(
                                           color: Colors.black,
-                                          fontSize: 15,
+                                          fontSize: 18,
                                         ),
                                       ),
                                       Text(
                                         'iOS',
                                         style: GoogleFonts.martel(
                                           color: Colors.black,
-                                          fontSize: 15,
+                                          fontSize: 18,
                                         ),
                                       ),
                                       Text(
-                                        'development',
+                                        // 'development',
+                                        'applications',
                                         style: GoogleFonts.martel(
                                           color: Colors.black,
-                                          fontSize: 15,
+                                          fontSize: 18,
                                         ),
                                       ),
                                     ],
@@ -348,21 +351,21 @@ class _HomeScreenState extends State<HomeScreen> {
                                         'Multiplatform',
                                         style: GoogleFonts.martel(
                                           color: Colors.black,
-                                          fontSize: 15,
+                                          fontSize: 18,
                                         ),
                                       ),
                                       Text(
                                         'Web',
                                         style: GoogleFonts.martel(
                                           color: Colors.black,
-                                          fontSize: 15,
+                                          fontSize: 18,
                                         ),
                                       ),
                                       Text(
                                         'development',
                                         style: GoogleFonts.martel(
                                           color: Colors.black,
-                                          fontSize: 15,
+                                          fontSize: 18,
                                         ),
                                       ),
                                     ],
@@ -460,9 +463,13 @@ class _HomeScreenState extends State<HomeScreen> {
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
+                        SizedBox(height:5),
                         Text(
                           "Currently available for freelance works.",
-                          style: GoogleFonts.martel(),
+                          style: GoogleFonts.martel(
+                            color: Colors.black,
+                            fontSize: 15,
+                          ),
                         ),
                         SizedBox(
                           height: 40,

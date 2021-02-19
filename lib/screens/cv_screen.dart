@@ -11,14 +11,11 @@ class CVScreen extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.white,
         elevation: 0,
-        title: Hero(
-          tag: 'cv',
-          child: Text(
-            "Abhirami C",
-            style: GoogleFonts.martel(
-              color: Colors.black,
-              fontSize: 23,
-            ),
+        title: Text(
+          "Abhirami C",
+          style: GoogleFonts.martel(
+            color: Colors.black,
+            fontSize: 25,
           ),
         ),
       ),
@@ -51,6 +48,10 @@ class CVScreen extends StatelessWidget {
                         textAlign: TextAlign.center,
                         style: GoogleFonts.martel(
                           color: Colors.black,
+                          fontSize: MediaQuery.of(context).size.width >
+                                  MediaQuery.of(context).size.height
+                              ? 15
+                              : 13,
                         ),
                       ),
                     ),
@@ -91,7 +92,7 @@ class CVScreen extends StatelessWidget {
                         children: [
                           Container(
                               // color: Colors.lightBlue[50],
-                              height: MediaQuery.of(context).size.height / 40),
+                              height: MediaQuery.of(context).size.height / 50),
                           Text(
                             "EXPERIENCE",
                             style: GoogleFonts.martel(
@@ -99,6 +100,9 @@ class CVScreen extends StatelessWidget {
                               fontSize: 15,
                             ),
                           ),
+                          Container(
+                              // color: Colors.lightBlue[50],
+                              height: MediaQuery.of(context).size.height / 60),
                           SubHeading(
                               "Inometrics Technology Systems Pvt Ltd - Technopark"),
                           Text(
@@ -185,6 +189,9 @@ class CVScreen extends StatelessWidget {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
+                          Container(
+                              // color: Colors.lightBlue[50],
+                              height: MediaQuery.of(context).size.height / 60),
                           Text(
                             "SKILLS",
                             style: GoogleFonts.martel(
@@ -192,6 +199,9 @@ class CVScreen extends StatelessWidget {
                               fontSize: 15,
                             ),
                           ),
+                          Container(
+                              // color: Colors.lightBlue[50],
+                              height: MediaQuery.of(context).size.height / 60),
                           Row(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             mainAxisAlignment: MainAxisAlignment.start,
