@@ -29,6 +29,7 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   google_fonts: ^1.1.2
+  pinch_zoom: ^0.0.4
   url_launcher: ^5.7.10
   flutter_sinusoidals:
   timelines: ^0.0.2+1
@@ -56,6 +57,10 @@ flutter:
     - lib/assets/images/mob_deva.png
     - lib/assets/images/web_deva.png
     - lib/assets/images/my_image.jpg
+    - lib/assets/images/travel_mock1.png
+    - lib/assets/images/travel2.png
+    - lib/assets/images/home2.png
+    - lib/assets/images/home1.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
