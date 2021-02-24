@@ -5,7 +5,6 @@ import 'package:pinch_zoom/pinch_zoom.dart';
 class ZoomPage extends StatelessWidget {
   final String image;
   final String appName;
-  // final String
   ZoomPage(this.image, this.appName);
   @override
   Widget build(BuildContext context) {
@@ -21,13 +20,22 @@ class ZoomPage extends StatelessWidget {
       ),
       body: Column(
         children: [
+          Padding(
+            padding: const EdgeInsets.only(top: 8.0),
+            child: Text(
+              "Pinch to Zoom",
+              style: GoogleFonts.poppins(
+                color: Colors.blue,
+              ),
+            ),
+          ),
           Container(
-            height: MediaQuery.of(context).size.height-MediaQuery.of(context).size.height/9,
+            height: MediaQuery.of(context).size.height -
+                MediaQuery.of(context).size.height / 7,
             width: MediaQuery.of(context).size.width,
             child: PinchZoom(
               // image: Image.network('http://placerabbit.com/200/333'),
               image: Image.asset(
-                // 'lib/assets/images/travel_mock1.png',
                 this.image,
                 height: MediaQuery.of(context).size.height / 2,
               ),
