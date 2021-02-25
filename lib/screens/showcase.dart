@@ -62,7 +62,7 @@ class Showcase extends StatelessWidget {
                   AppCard(
                       'lib/assets/images/home1.png',
                       'lib/assets/images/home2.png',
-                      "Neomorphic Smart home ui"),
+                      "Neumorphic Smart home ui"),
                 ],
               )
             //   ? GridView(
