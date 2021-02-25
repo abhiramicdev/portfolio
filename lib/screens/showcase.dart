@@ -32,32 +32,99 @@ class Showcase extends StatelessWidget {
             ],
           ),
         ),
-        body: ListView(
-          scrollDirection: MediaQuery.of(context).size.width >
-                  MediaQuery.of(context).size.height
-              ? Axis.horizontal
-              : Axis.vertical,
-          children: [
-            Padding(
-              padding: const EdgeInsets.symmetric(vertical: 12.0),
-              child: Text(
-                "#MadewithFlutter",
-                textAlign: TextAlign.center,
-                style: GoogleFonts.poppins(
-                  color: Colors.blue,
-                ),
+        body: MediaQuery.of(context).size.width >
+                MediaQuery.of(context).size.height
+            // ? GridView.count(
+            //     crossAxisCount: 2,
+            //     crossAxisSpacing: 10.0,
+            //     mainAxisSpacing: 10.0,
+            //     shrinkWrap: true,
+            //     children: List.generate(
+            //       2,
+            //       (index) {
+            //         return AppCard(
+            //           'lib/assets/images/travel_mock1.png',
+            //           'lib/assets/images/travel2.png',
+            //           'Travel app ui',
+            //         );
+            //       },
+            //     ),
+            //   )
+            ? GridView(
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 2),
+                children: <Widget>[
+                  AppCard(
+                    'lib/assets/images/travel_mock1.png',
+                    'lib/assets/images/travel2.png',
+                    'Travel app ui',
+                  ),
+                  AppCard(
+                      'lib/assets/images/home1.png',
+                      'lib/assets/images/home2.png',
+                      "Neomorphic Smart home ui"),
+                ],
+              )
+            //   ? GridView(
+            //     key: ,
+            //     scrollDirection: Axis.vertical,
+            // // crossAxisCount: 2,
+            //       // crossAxisSpacing: 10.0,
+            //       // mainAxisSpacing: 10.0,
+            //       shrinkWrap: true,
+            //       // scrollDirection:
+            //       // ? Axis.horizontal
+            //       // Axis.vertical,
+            //       children: [
+            //         Padding(
+            //           padding: const EdgeInsets.symmetric(vertical: 12.0),
+            //           child: Text(
+            //             "#MadewithFlutter",
+            //             textAlign: TextAlign.center,
+            //             style: GoogleFonts.poppins(
+            //               color: Colors.blue,
+            //             ),
+            //           ),
+            //         ),
+            //         AppCard(
+            //           'lib/assets/images/travel_mock1.png',
+            //           'lib/assets/images/travel2.png',
+            //           'Travel app ui',
+            //         ),
+            //         AppCard(
+            //             'lib/assets/images/home1.png',
+            //             'lib/assets/images/home2.png',
+            //             "Neomorphic Smart home ui"),
+            //         EndText(),
+            //       ],
+            //     )
+            : ListView(
+                scrollDirection:
+                    // ? Axis.horizontal
+                    Axis.vertical,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 12.0),
+                    child: Text(
+                      "#MadewithFlutter",
+                      textAlign: TextAlign.center,
+                      style: GoogleFonts.poppins(
+                        color: Colors.blue,
+                      ),
+                    ),
+                  ),
+                  AppCard(
+                    'lib/assets/images/travel_mock1.png',
+                    'lib/assets/images/travel2.png',
+                    'Travel app ui',
+                  ),
+                  AppCard(
+                      'lib/assets/images/home1.png',
+                      'lib/assets/images/home2.png',
+                      "Neomorphic Smart home ui"),
+                  EndText(),
+                ],
               ),
-            ),
-            AppCard(
-              'lib/assets/images/travel_mock1.png',
-              'lib/assets/images/travel2.png',
-              'Travel app ui',
-            ),
-            AppCard('lib/assets/images/home1.png',
-                'lib/assets/images/home2.png', "Neomorphic Smart home ui"),
-            EndText(),
-          ],
-        ),
       ),
     );
   }
