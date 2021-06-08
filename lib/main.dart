@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:myportfolio/screens/showcase.dart';
-import 'package:myportfolio/screens/zoom_image.dart';
 import 'screens/cv_screen.dart';
-import 'screens/home_screen.dart';
 
 void main() {
   runApp(MyApp());
